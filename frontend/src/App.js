@@ -69,7 +69,7 @@ const ProtectedRoute = ({ children, allowedRoles = ["admin", "viewer"] }) => {
 
 // Navigation Component
 const Navigation = () => {
-  const { user, logout } = React.useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
   
   const handleLogout = () => {
