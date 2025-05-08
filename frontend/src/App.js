@@ -50,7 +50,7 @@ const AuthProvider = ({ children }) => {
 
 // Protected Route Component
 const ProtectedRoute = ({ children, allowedRoles = ["admin", "viewer"] }) => {
-  const { user, loading } = React.useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
   
   if (loading) {
     return <div className="flex justify-center items-center h-screen">Loading...</div>;
